@@ -44,7 +44,7 @@ function checklevel(idx){
             highScore = level;
             localStorage.setItem('highScore', highScore);
         }
-        h2.innerHTML=`Game over! Your score is <b>${level}</b> <br> Press any key to restart`;
+        h2.innerHTML=`Game over! Your score is <b>${level}</b> and your highest score is <b>${highScore}</b> <br> Press any key to restart`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor="white";
