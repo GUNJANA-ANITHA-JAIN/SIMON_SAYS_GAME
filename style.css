@@ -8,6 +8,11 @@ body{
     border: 10px solid black;
     margin:2.5rem;
 }
+@media (max-width: 600px) {
+    .btn-container {
+        flex-wrap: wrap;
+    }
+}
 .btn-container{
     display:flex;
     justify-content: center;
