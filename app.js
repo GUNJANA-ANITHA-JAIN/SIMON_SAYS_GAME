@@ -32,13 +32,18 @@ game_seq.push(randomcolor);
 console.log(game_seq);
 btnflash(randombtn);
 }
+let highScore = localStorage.getItem('highScore') || 0;
 function checklevel(idx){
     // console.log(`The current level is ${level}`);
     if(game_seq[idx]==user_seq[idx]){
        if(game_seq.length==user_seq.length){
         setTimeout(levelUp,1000);
        }
-    }else{
+    } else {
+        if (level > highScore) {
+            highScore = level;
+            localStorage.setItem('highScore', highScore);
+        }
         h2.innerHTML=`Game over! Your score is <b>${level}</b> <br> Press any key to restart`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(function(){
