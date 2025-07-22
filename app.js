@@ -22,7 +22,7 @@ function levelUp(){
     user_seq=[];
     level++;
 h2.innerText=`Level ${level}`;
-let randomIdx=Math.floor(Math.random()*3);
+let randomIdx=Math.floor(Math.random()*4);
 let randomcolor=btns[randomIdx];
 let randombtn=document.querySelector(`.${randomcolor}`);
 // console.log(randomIdx);
